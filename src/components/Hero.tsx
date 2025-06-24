@@ -28,7 +28,7 @@ const Hero = () => {
           <Button
             variant="outline"
             size="lg"
-            className="border-white text-white hover:bg-white hover:text-nature-brown px-8 py-3 text-lg"
+            className="border-nature-green text-nature-green hover:bg-nature-green hover:text-white px-8 py-3 text-lg"
           >
             Узнать больше
           </Button>
