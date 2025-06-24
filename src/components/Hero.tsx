@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services");
+    servicesSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
@@ -22,6 +32,7 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-nature-brown hover:bg-nature-brown/90 text-white px-8 py-3 text-lg"
+            onClick={scrollToContact}
           >
             Записаться на сеанс
           </Button>
@@ -29,6 +40,7 @@ const Hero = () => {
             variant="outline"
             size="lg"
             className="border-nature-green text-nature-green hover:bg-nature-green hover:text-white px-8 py-3 text-lg"
+            onClick={scrollToServices}
           >
             Узнать больше
           </Button>

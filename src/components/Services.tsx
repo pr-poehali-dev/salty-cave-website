@@ -2,6 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Services = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const services = [
     {
       title: "Индивидуальные сеансы",
@@ -76,7 +81,10 @@ const Services = () => {
                     </span>
                   </div>
                 </div>
-                <Button className="w-full bg-nature-brown hover:bg-nature-brown/90">
+                <Button
+                  className="w-full bg-nature-brown hover:bg-nature-brown/90"
+                  onClick={scrollToContact}
+                >
                   Записаться
                 </Button>
               </CardContent>
@@ -96,6 +104,7 @@ const Services = () => {
             <Button
               size="lg"
               className="bg-nature-green hover:bg-nature-green/90"
+              onClick={scrollToContact}
             >
               Узнать о курсах
             </Button>
